@@ -1,0 +1,166 @@
+/* =========================================================
+   R.E.P.O - ESTILOS BASE PARA INDEX.HTML
+   ========================================================= */
+
+/* ----------- ESTILO GENERAL ----------- */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0b0b0d;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   NAVBAR ESTILO R.E.P.O
+   ========================================================= */
+.navbar {
+  background-color: #000 !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  padding: 1rem 2rem;
+  font-weight: 500;
+}
+
+.navbar-brand {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  color: #00eaff !important;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  color: #e0e0e0 !important;
+  margin: 0 0.6rem;
+  transition: 0.3s ease;
+}
+
+.nav-link i {
+  margin-right: 6px;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+.nav-link:hover {
+  color: #00eaff !important;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+.nav-link.active {
+  color: #00eaff !important;
+  border-bottom: 2px solid #00eaff;
+}
+
+/* ----------- SECCIONES PRINCIPALES ----------- */
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+#carrusel {
+  background-color: #000080;
+  height: 100vh;
+}
+
+#caracteristicas {
+  background-color: #2E8B57;
+  height: 600px;
+}
+
+#resenas {
+  background-color: #4B5320;
+  height: 600px;
+}
+
+/* ----------- FOOTER ----------- */
+footer {
+  background-color: #8B006B;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN (Breakpoints)
+   ========================================================= */
+
+/* Dispositivos pequeños (móviles verticales, <576px) */
+@media (max-width: 575.98px) {
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  #caracteristicas, #resenas {
+    height: auto;
+    padding: 4rem 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  .nav-link i {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+/* Tablets (576px – 991px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  #caracteristicas, #resenas {
+    height: auto;
+    padding: 5rem 2rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .nav-link i {
+    font-size: 1.1rem;
+  }
+
+  footer {
+    font-size: 0.85rem;
+  }
+}
+
+/* Portátiles pequeños (992px – 1439px) */
+@media (min-width: 992px) and (max-width: 1439.98px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  #caracteristicas, #resenas {
+    height: 550px;
+  }
+
+  .nav-link i {
+    font-size: 1.2rem;
+  }
+}
+
+/* Pantallas grandes (≥1440px) */
+@media (min-width: 1440px) {
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  #caracteristicas, #resenas {
+    height: 650px;
+  }
+
+  .nav-link i {
+    font-size: 1.3rem;
+  }
+}
