@@ -10,66 +10,121 @@
 </head>
 <body>
 
-  
-<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
-  <div class="container-fluid">
-    <a class="navbar-brand fw-bold" href="#">
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">
         <img src="media/imgs/repo_logo.png" alt="Logo of the R.E.P.O game" class="logo_repo"> 
-    </a>
+      </a>
 
-    
-   <form class="d-flex search-bar mx-auto justify-content-center ps-5" role="search" action="">
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-search" type="submit">Search</button>
-   </form>
+      <form class="d-flex search-bar mx-auto justify-content-center ps-5" role="search" action="">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-search" type="submit">Search</button>
+      </form>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">
+              <i class="bi bi-house"></i> Inicio
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sections/gallery.html">
+              <i class="bi bi-camera2"></i> Galería
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sections/guia.html">
+              <i class="bi bi-controller"></i> Guía
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sections/contact.html">
+              <i class="bi bi-telephone"></i> Contacto
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== CARRUSEL ===== -->
+  <div id="carouselRepo" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselRepo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carouselRepo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselRepo" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#carouselRepo" data-bs-slide-to="3"></button>
+      <button type="button" data-bs-target="#carouselRepo" data-bs-slide-to="4"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="media/imgs/EXTRACTOR.png" class="d-block w-100" alt="Imagen de un extractor dentro del juego">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Bienvenido a tu nueva misión</h5>
+          <p>¿Te ves preparado para ella?.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="media/imgs/CUOTA.png" class="d-block w-100" alt="Imagen de extractor dentro del juego tras alcanzar la cuota">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Recolecta elementos valiosos. </h5>
+          <p>Alcanza la cuota impuesta por "THE TAXMAN" </p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="media/imgs/JUEGA_CON_AMIGOS.png" class="d-block w-100" alt="Imagen mostrando el juego en equipo">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Juega en equipo</h5>
+          <p>Juntaros en un grupo de hasta 6 personas, y ayudaros entre vosotros.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="media/imgs/MONSTRUOS.png" class="d-block w-100" alt="Imagen mostrando uno de los varios monstruos del juego">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>¡CUIDADO!</h5>
+          <p>Estate atento a los monstruos, muchos de ellos tienen habilidades que pueden eliminarte. </p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="media/imgs/ARMAS.png" class="d-block w-100" alt="Imagen mostrando una de las varias armas del juego">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>¡ÁRMATE!</h5>
+          <p>Estas armas pueden ser buenas defensas contra monstruos</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselRepo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="index.html">
-            <i class="bi bi-house"></i> Inicio
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="sections/gallery.html">
-            <i class="bi bi-camera2"></i> Galería
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="sections/guia.html">
-            <i class="bi bi-controller"></i> Guía
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="sections/contact.html">
-            <i class="bi bi-telephone"></i> Contacto
-          </a>
-        </li>
-      </ul>
-    </div>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselRepo" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
   </div>
-</nav>
 
-  
-  <section id="carrusel" class="text-white d-flex align-items-center justify-content-center" style="background-color:#000080; height: 800px;">
-    <h2>CARRUSEL</h2>
-  </section>
-
-  
+  <!-- ===== SECCIONES RESTANTES ===== -->
   <section id="caracteristicas" class="text-white d-flex align-items-center justify-content-center" style="background-color:#2E8B57; height: 600px;">
     <h2>CARACTERÍSTICAS PRINCIPALES DEL JUEGO</h2>
   </section>
 
-  
   <section id="resenas" class="text-white d-flex align-items-center justify-content-center" style="background-color:#4B5320; height: 600px;">
     <h2>RESEÑAS DE USUARIOS</h2>
   </section>
 
-  
   <footer class="text-white text-center py-4" style="background-color:#8B006B;">
     <p class="mb-0">© 2025 R.E.P.O Technologies. Todos los derechos reservados.</p>
   </footer>
