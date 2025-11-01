@@ -67,15 +67,16 @@ body {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  margin-bottom: 70px;
 }
 
 .carousel-item img {
-  display: block; 
-  width: 100vw; 
-  height: auto; 
-  max-height: 95vh; 
-  object-fit: cover; 
-  object-position: center; 
+  display: block;
+  width: 100vw;
+  height: auto;
+  max-height: 95vh;
+  object-fit: cover;
+  object-position: center;
   filter: brightness(75%);
 }
 
@@ -84,7 +85,7 @@ body {
   border-radius: 12px;
   padding: 1rem 1.5rem;
   text-shadow: 0 0 10px rgba(0,0,0,0.8);
-  bottom: 80px; 
+  bottom: 80px;
 }
 
 .carousel-caption h5 {
@@ -99,50 +100,193 @@ body {
 }
 
 .carousel-indicators {
-  bottom: 60px; 
+  bottom: 60px;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: rgba(221, 122, 9, 0.9); 
-  border-radius: 50%;                       
-  padding: 22px;                            
-  background-size: 60% 60%;                 
+  background-color: rgba(221, 122, 9, 0.9);
+  border-radius: 50%;
+  padding: 22px;
+  background-size: 60% 60%;
   transition: all 0.3s ease;
-  filter: brightness(1.2);                  
+  filter: brightness(1.2);
 }
 
 .carousel-control-prev-icon:hover,
 .carousel-control-next-icon:hover {
-  background-color: rgba(180, 100, 5, 1);   
-  transform: scale(1.1);                    
+  background-color: rgba(180, 100, 5, 1);
+  transform: scale(1.1);
 }
 
-/* ----------- FOOTER ----------- */
-footer {
-  background-color: #8B006B;
+/* ===== CARACTERÍSTICAS ===== */
+#caracteristicas {
+  background-color: #000;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+#caracteristicas h2 {
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  color: #dd7a09;
+}
+
+#caracteristicas .feature-icon {
+  font-size: 3.5rem;
+  color: #c18905;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#caracteristicas .feature-icon:hover {
+  transform: scale(1.2);
+  color: #b30d1f;
+}
+
+#caracteristicas h4 {
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+}
+
+#caracteristicas p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #bfbfbf;
+  line-height: 1.6;
+}
+
+/* ===== MODOS DE JUEGO (SVG + hover coherentes con características) ===== */
+
+#modos-juego {
+  background-color: #000;
   text-align: center;
-  padding: 2rem 0;
+  padding-top: 6rem;
+  padding-bottom: 7rem;
+}
+
+#modos-juego h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #dd7a09; /* Naranja igual que Características */
+  margin-bottom: 4rem;
+}
+
+#modos-juego .col-md-4 {
+  margin-bottom: 3rem;
+}
+
+#modos-juego .feature-icon {
+  font-size: 4rem;
+  color: #c18905; /* Dorado igual que los otros SVG */
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 1.5rem;
+}
+
+#modos-juego .feature-icon:hover {
+  transform: scale(1.2);
+  color: #b30d1f; /* Naranja oscuro al pasar el ratón */
+}
+
+#modos-juego h4 {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+#modos-juego p {
+  color: #bfbfbf;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+
+
+/* ===== RESEÑAS ===== */
+#resenas {
+  background-color: #212529;
+  padding-top: 5.5rem; 
+  padding-bottom: 8rem;
+}
+
+
+#resenas h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  color: #dd7a09;
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 4rem;
+  margin-top: -1rem; 
+
+}
+
+#resenas .container {
+  max-width: 1500px;
+}
+
+.reviews-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.reviews-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.review-card {
+  background-color: #f8f9fa;
+  color: #000;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px; 
+  min-height: 150px;
+}
+
+
+.review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(221, 122, 9, 0.35);
+}
+
+.review-card p {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+}
+
+.review-card span {
+  display: block;
+  text-align: right;
+  color: #555;
+  font-weight: 600;
   font-size: 0.9rem;
 }
 
-/* ===== ESPACIADO ENTRE SECCIONES ===== */
-#caracteristicas,
-#resenas {
-  margin-top: 3rem;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-} 
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .carousel-item img {
-    height: 70vh;
-  }
-  .carousel-caption h5 {
-    font-size: 1.4rem;
-  }
-  .carousel-caption p {
-    font-size: 0.9rem;
-  }
+
+
+/* ----------- FOOTER ----------- */
+footer {
+  background-color: #172322;
+  text-align: center;
+  padding: 5rem 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #ffffff;
 }
+
+
