@@ -10,7 +10,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ===== NAVBAR (Bootstrap puro, sin media queries personalizadas) ===== */
+/* ===== NAVBAR ===== */
 .navbar {
   background-color: #001913 !important;
   box-shadow: 0 2px 10px rgba(0,0,0,0.6);
