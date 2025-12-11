@@ -66,16 +66,31 @@
   <section id="formulario" class="text-center text-light">
     <div class="container py-5">
       <h2 class="fw-bold mb-4">Formulario de Contacto</h2>
-      <form class="mx-auto" style="max-width:600px;">
+
+      <form class="contact-form mx-auto" 
+          action="https://postman-echo.com/post"
+          method="POST">
+
         <div class="mb-3">
-          <input type="text" class="form-control" placeholder="Nombre completo">
+          <input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
         </div>
+
         <div class="mb-3">
-          <input type="email" class="form-control" placeholder="Correo electrónico">
+          <input type="text" class="form-control" name="apellidos" placeholder="Apellidos" required>
         </div>
+
         <div class="mb-3">
-          <textarea class="form-control" rows="4" placeholder="Mensaje"></textarea>
+          <input type="tel" class="form-control" name="telefono" placeholder="Teléfono" required>
         </div>
+
+        <div class="mb-3">
+          <input type="email" class="form-control" name="email" placeholder="Correo electrónico" required>
+        </div>
+
+        <div class="mb-3">
+          <textarea class="form-control" name="mensaje" rows="4" placeholder="Mensaje" required></textarea>
+        </div>
+
         <button class="btn btn-warning fw-bold" type="submit">Enviar</button>
       </form>
     </div>

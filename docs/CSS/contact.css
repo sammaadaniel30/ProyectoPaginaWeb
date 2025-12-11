@@ -69,7 +69,10 @@ body {
 #formulario input::placeholder, #formulario textarea::placeholder {
   color: #aaa;
 }
-
+#formulario .contact-form {
+  max-width: 600px;
+  margin: 0 auto; /* igual que mx-auto de Bootstrap */
+}
 /* ===== FOOTER ===== */
 footer {
   background-color: #172322;
