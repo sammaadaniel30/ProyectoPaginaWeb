@@ -81,3 +81,21 @@ footer {
   color: #ffffff;
   font-size: 0.9rem;
 }
+
+
+.error {
+  border: 2px solid #dc3545 !important;
+}
+
+.success {
+  border: 2px solid #198754 !important;
+}
+
+.error-text {
+  color: #dc3545;
+  font-size: 0.85rem;
+  display: block;
+  text-align: left;
+}
+
+
