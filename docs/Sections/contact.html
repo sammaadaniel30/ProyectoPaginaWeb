@@ -16,23 +16,38 @@
 
   <body>
 
-  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark" style="background:#001913">
     <div class="container-fluid">
       <a class="navbar-brand" href="../index.html">
         <img src="../media/imgs/repo_logo.png" alt="R.E.P.O." style="height:55px;object-fit:contain">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarRepo">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarRepo" aria-controls="navbarRepo"
+              aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarRepo">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="gallery.html">Galería</a></li>
-          <li class="nav-item"><a class="nav-link" href="guia.html">Guía</a></li>
-          <li class="nav-item"><a class="nav-link active" href="contact.html">Contacto</a></li>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html"><i class="bi bi-house"></i> Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html"><i class="bi bi-camera"></i> Galería</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="guia.html"><i class="bi bi-controller"></i> Guía</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contact.html"><i class="bi bi-telephone"></i> Contacto</a>
+          </li>
         </ul>
+
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
+          <button class="btn btn-warning fw-bold" type="submit">Buscar</button>
+        </form>
       </div>
     </div>
   </nav>
@@ -160,6 +175,34 @@
           <textarea class="form-control" id="mensaje" name="mensaje" placeholder=" " style="height:120px"></textarea>
           <label for="mensaje">Mensaje</label>
           <small class="error-text"></small>
+        </div>
+
+        <!-- MODO DE CONTACTO -->
+        <div class="mb-4 text-start">
+          <p class="fw-bold mb-2">Modo de contacto preferido</p>
+
+          <div class="btn-group w-100" role="group">
+            <input type="radio"
+                  class="btn-check"
+                  name="modo_contacto"
+                  id="contactoTelefono"
+                  value="telefono"
+                  checked>
+
+            <label class="btn btn-outline-warning" for="contactoTelefono">
+              <i class="bi bi-telephone-fill"></i> Teléfono
+            </label>
+
+            <input type="radio"
+                  class="btn-check"
+                  name="modo_contacto"
+                  id="contactoEmail"
+                  value="email">
+
+            <label class="btn btn-outline-warning" for="contactoEmail">
+              <i class="bi bi-envelope-fill"></i> Email
+            </label>
+          </div>
         </div>
 
         <button type="submit" class="btn btn-warning fw-bold">Enviar</button>
