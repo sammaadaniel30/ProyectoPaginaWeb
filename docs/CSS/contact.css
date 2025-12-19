@@ -1,4 +1,4 @@
-/* PARA CONTACT.HTML */ 
+/* PARA CONTACT.HTML */
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -34,6 +34,8 @@ body {
   width: 1.8rem; height: 1.8rem;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255,255,255,0.9)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
+
+/* ===== BOTONES ===== */
 .btn-warning {
   background-color: #ae3504 !important;
   color: #ffffff !important;
@@ -61,18 +63,21 @@ body {
 #formulario {
   background-color: #3a3a0d;
 }
-#formulario input, #formulario textarea {
+#formulario input,
+#formulario textarea {
   background-color: #111;
   color: #fff;
   border: 1px solid #555;
 }
-#formulario input::placeholder, #formulario textarea::placeholder {
+#formulario input::placeholder,
+#formulario textarea::placeholder {
   color: #aaa;
 }
 #formulario .contact-form {
   max-width: 600px;
-  margin: 0 auto; /* igual que mx-auto de Bootstrap */
+  margin: 0 auto;
 }
+
 /* ===== FOOTER ===== */
 footer {
   background-color: #172322;
@@ -82,7 +87,7 @@ footer {
   font-size: 0.9rem;
 }
 
-
+/* ===== VALIDACIÓN ===== */
 .error {
   border: 2px solid #dc3545 !important;
 }
@@ -98,4 +103,123 @@ footer {
   text-align: left;
 }
 
+#mapa h2 {
+  margin-bottom: 7rem;
+}
 
+#mapa .ratio {
+  margin-bottom: 8rem;
+}
+
+
+/* ===== FIX FLOATING LABELS ===== */
+.form-floating > label {
+  background-color: transparent !important;
+  color: #aaa;
+}
+
+
+/* ================================================= */
+/* ===== PERFIL AUTOR (NUEVO, AÑADIDO) ============== */
+/* ================================================= */
+
+.autor-card {
+  background-color: #0f0f0f;
+  max-width: 1350px;
+  margin: 8rem auto; 
+  display: flex;
+  gap: 5rem;
+  padding: 4.5rem 4rem;
+  border-radius: 18px;
+  box-shadow: 0 0 45px rgba(255, 180, 0, 0.25);
+  align-items: center;
+}
+
+.autor-img {
+  width: 260px;
+  height: 260px;
+  flex-shrink: 0;
+}
+
+.autor-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 3px solid #ffb300;
+}
+
+.autor-info h2 {
+  font-weight: 900;
+  margin-bottom: 3rem;
+}
+
+.autor-desc {
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+.autor-datos p {
+  margin-bottom: 0.4rem;
+}
+
+.autor-datos i {
+  color: #ffb300;
+  margin-right: 0.4rem;
+}
+
+.autor-links {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.autor-links a {
+  color: #ffb300;
+  text-decoration: none;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.autor-links a:hover {
+  text-decoration: underline;
+}
+
+#formulario {
+  padding-bottom: 6rem;
+}
+
+#formulario .container {
+  padding-top: 1rem;
+}
+
+
+#formulario .contact-form {
+  background-color: #0f0f0f;
+  max-width: 800px;
+  margin-top: 7rem;
+  margin-bottom: 8rem;
+  padding: 3.5rem 3rem;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#formulario .form-floating {
+  margin-bottom: 1.8rem;
+}
+
+/* ===== RESPONSIVE PERFIL AUTOR ===== */
+@media (max-width: 768px) {
+  .autor-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .autor-img {
+    width: 220px;
+    height: 220px;
+  }
+}

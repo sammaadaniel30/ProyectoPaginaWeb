@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800;900&display=swap" rel="stylesheet">
 
-    <!-- CSS propio -->
+    <!-- CSS -->
     <link rel="stylesheet" href="../CSS/contact.css">
   </head>
 
@@ -22,46 +22,98 @@
       <a class="navbar-brand" href="../index.html">
         <img src="../media/imgs/repo_logo.png" alt="R.E.P.O." style="height:55px;object-fit:contain">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarRepo" aria-controls="navbarRepo"
-              aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarRepo">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarRepo">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="../index.html"><i class="bi bi-house"></i> Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="bi bi-camera"></i> Galería</a></li>
-          <li class="nav-item"><a class="nav-link" href="guia.html"><i class="bi bi-controller"></i> Guía</a></li>
-          <li class="nav-item"><a class="nav-link active" href="contact.html"><i class="bi bi-telephone"></i> Contacto</a></li>
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="guia.html">Guía</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contacto</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- PERFIL -->
-  <section id="perfil" class="text-center text-light">
+  <section id="perfil" class="text-light">
     <div class="container py-5">
-      <h2 class="fw-bold mb-4">Perfil del Autor</h2>
-      <p>Estudiante de la Universidad Francisco de Vitoria apasionado por el desarrollo de videojuegos y el diseño interactivo.</p>
+
+      <h2 class="fw-bold mb-4 text-center">Perfil del Autor</h2>
+
+      <div class="autor-card">
+
+        <!-- IMAGEN -->
+        <div class="autor-img">
+          <img src="../media/imgs/current_profile.png" alt="Imagen del autor">
+        </div>
+
+        <!-- INFORMACIÓN -->
+        <div class="autor-info">
+          <h2>Daniel Sama Clemente</h2>
+
+          <p class="autor-desc">
+            Soy estudiante de la Universidad Francisco de Vitoria, apasionado de la
+            tecnología y los videojuegos. Me encanta aprender y crear proyectos relacionados
+            con informática. Luego tengo una afición grande a los videojuegos
+            y, especialmente, con el universo de <strong>R.E.P.O</strong>.
+          </p>
+
+          <div class="autor-datos">
+            <p>
+              <i class="bi bi-telephone-fill"></i>
+              <a href="tel:+34618805244">+34 618 805 244</a>
+            </p>
+
+            <p>
+              <i class="bi bi-telephone-fill"></i>
+              <a href="tel:+528115373632">+52 81 1537 3632</a>
+            </p>
+
+            <p>
+              <i class="bi bi-envelope-fill"></i>
+              <a href="mailto:danielsamac@gmail.com">danielsamac@gmail.com</a>
+            </p>
+          </div>
+
+
+          <div class="autor-links">
+            <a href="https://www.instagram.com/sammaadaniel30/" target="_blank">
+              <i class="bi bi-instagram"></i> Instagram
+            </a>
+            <a href="https://www.linkedin.com/in/daniel-sama-clemente-ab19a4306/" target="_blank">
+              <i class="bi bi-linkedin"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
   <!-- MAPA -->
   <section id="mapa" class="text-center text-light">
     <div class="container py-5">
-      <h2 class="fw-bold mb-4">Mapa de Google Maps</h2>
+      <h2 class="fw-bold">Mapa de Google Maps</h2>
       <div class="ratio ratio-16x9">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20460.652927104986!2d17.6150539!3d59.8585632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465fcdd72240bd0f%3A0x4019078290f0e60!2sUppsala!5e0!3m2!1ses!2ses!4v1702290000000!5m2!1ses!2ses"
-          allowfullscreen
-          loading="lazy">
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20460.652927104986!2d17.6150539!3d59.8585632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465fcdd72240bd0f%3A0x4019078290f0e60!2sUppsala%2C%20Suecia!5e0!3m2!1ses!2ses!4v1700000000000"
+          width="100%"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
     </div>
   </section>
 
   <!-- FORMULARIO -->
+   
   <section id="formulario" class="text-center text-light">
     <div class="container py-5">
       <h2 class="fw-bold mb-4">Formulario de Contacto</h2>
@@ -71,36 +123,26 @@
             method="POST"
             novalidate>
 
-        <!-- NOMBRE -->
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="">
+          <input type="text" class="form-control" id="nombre" name="nombre" placeholder=" ">
           <label for="nombre">Nombre</label>
           <small class="error-text"></small>
         </div>
 
-        <!-- APELLIDOS -->
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="">
+          <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder=" ">
           <label for="apellidos">Apellidos</label>
           <small class="error-text"></small>
         </div>
 
-        <!-- EMAIL -->
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="email" name="email" placeholder="">
+          <input type="text" class="form-control" id="email" name="email" placeholder=" ">
           <label for="email">Correo electrónico</label>
           <small class="error-text"></small>
         </div>
 
-        <!-- TELÉFONO + DATALIST -->
         <div class="form-floating mb-3">
-          <input type="text"
-                class="form-control"
-                id="telefono"
-                name="telefono"
-                placeholder=""
-                list="prefijos">
-
+          <input type="text" class="form-control" id="telefono" name="telefono" list="prefijos" placeholder=" ">
           <label for="telefono">Teléfono</label>
 
           <datalist id="prefijos">
@@ -108,37 +150,28 @@
             <option value="+33 " label="Francia (+33)">
             <option value="+49 " label="Alemania (+49)">
             <option value="+39 " label="Italia (+39)">
-            <option value="+1 "  label="Estados Unidos (+1)">
+            <option value="+1 " label="Estados Unidos (+1)">
           </datalist>
 
           <small class="error-text"></small>
         </div>
 
         <div class="form-floating mb-3">
-          <textarea class="form-control"
-                    id="mensaje"
-                    name="mensaje"
-                    placeholder=""
-                    style="height:120px"></textarea>
+          <textarea class="form-control" id="mensaje" name="mensaje" placeholder=" " style="height:120px"></textarea>
           <label for="mensaje">Mensaje</label>
           <small class="error-text"></small>
         </div>
 
-        <button type="submit" class="btn btn-warning fw-bold">
-          Enviar
-        </button>
-
+        <button type="submit" class="btn btn-warning fw-bold">Enviar</button>
       </form>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>© 2025 R.E.P.O Technologies. Todos los derechos reservados.</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../JS/contact.js"></script>
-
   </body>
 </html>

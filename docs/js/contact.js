@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       input.classList.remove("error", "success");
       errorText.textContent = "";
 
-      // 1️⃣ Campo vacío
+      // Campo vacío
       if (input.value.trim() === "") {
         input.classList.add("error");
         errorText.textContent = "Campo obligatorio";
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // 2️⃣ Email
+      // Email
       if (
         input.id === "email" &&
         (!input.value.includes("@") || !emailRegex.test(input.value))
@@ -44,12 +44,11 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // 3️⃣ Teléfono (prefijo + longitud)
+      // Teléfono
       if (input.id === "telefono") {
 
         const value = input.value.trim();
 
-        // Formato general
         if (!phoneRegex.test(value)) {
           input.classList.add("error");
           errorText.textContent = "Formato: +34 612345678";
@@ -57,13 +56,9 @@ document.addEventListener("DOMContentLoaded", () => {
           return;
         }
 
-        // Extraer prefijo (+34, +33...)
         const prefix = value.split(" ")[0];
-
-        // Extraer solo números nacionales
         const number = value.replace(prefix, "").replace(/\s+/g, "");
 
-        // Comprobar longitud según país
         if (phoneLengths[prefix]) {
           if (number.length !== phoneLengths[prefix]) {
             input.classList.add("error");
@@ -75,13 +70,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
-      // ✔ Correcto
+      // Correcto
       input.classList.add("success");
     });
 
-    // 4️⃣ Envío final
     if (isValid) {
       form.submit();
     }
   });
 });
+
