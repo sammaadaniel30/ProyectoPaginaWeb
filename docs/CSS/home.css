@@ -236,13 +236,8 @@ body {
   background-color: #f8f9fa;
   color: #000;
   border-radius: 12px;
-
-  /* 🔹 Padding uniforme más amplio */
   padding: 2.2rem 2.4rem;
-
-  /* 🔹 Altura ligeramente mayor y uniforme */
   height: 240px;
-
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   transition: all 0.3s ease;
   text-align: center;
@@ -264,7 +259,7 @@ body {
 
 .review-card span {
   display: block;
-  margin-top: 1rem; /* ajustado ligeramente para mantener proporción */
+  margin-top: 1rem; 
   font-weight: 800;
   color: #b30d1f;
 }
