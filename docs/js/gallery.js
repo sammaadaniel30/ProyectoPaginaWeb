@@ -1,24 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const images = document.querySelectorAll(".carousel-img");
-  const prevBtn = document.querySelector(".carousel-btn.prev");
-  const nextBtn = document.querySelector(".carousel-btn.next");
+  const images = document.querySelectorAll(".gallery-item img");
 
-  let index = 0;
+  images.forEach(img => {
+    img.addEventListener("click", () => {
 
-  function showImage(i) {
-    images.forEach(img => img.classList.remove("active"));
-    images[i].classList.add("active");
-  }
+      // Si NO está en fullscreen → entrar
+      if (!document.fullscreenElement) {
+        if (img.requestFullscreen) {
+          img.requestFullscreen();
+        } else if (img.webkitRequestFullscreen) { // Safari
+          img.webkitRequestFullscreen();
+        } else if (img.msRequestFullscreen) { // Edge antiguo
+          img.msRequestFullscreen();
+        }
+      }
+      // Cuando ya esté en fullscreen se podrá salir 
+      else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        }
+      }
 
-  prevBtn.addEventListener("click", () => {
-    index = (index - 1 + images.length) % images.length;
-    showImage(index);
-  });
-
-  nextBtn.addEventListener("click", () => {
-    index = (index + 1) % images.length;
-    showImage(index);
+    });
   });
 
 });
