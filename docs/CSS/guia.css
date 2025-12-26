@@ -86,52 +86,48 @@ body {
   background-color: #ff0066;
 }
 
-/* CAJA CONTENEDORA */
+/* CAJA GRANDE */
 .controls-box {
   background-color: #2e2f0f;
   box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
-/* ITEM INDIVIDUAL */
+/* TARJETA INDIVIDUAL */
 .control-item {
-  text-align: center;
   display: flex;
-  flex-direction: column; /* uno encima de otro */
+  align-items: center;
   gap: 1rem;
 }
 
-/* IMAGEN */
-.control-item img {
-  width: 100%;
-  aspect-ratio: 16 / 9;   /* misma proporción que el vídeo */
-  object-fit: cover;
+/* IMAGEN IZQUIERDA */
+.control-thumb {
+  flex: 0 0 46%;
   border-radius: 8px;
-  margin-bottom: 2rem;    /* separación exacta entre imágenes */
+  overflow: hidden;
 }
 
-/* SUBTÍTULO */
-.control-item h4 {
+.control-thumb img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+/* TEXTO DERECHA */
+.control-text {
+  flex: 1;
+}
+
+.control-text h4 {
   color: #ffffff;
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.5rem 0;
 }
 
-/* TEXTO */
-.control-item p {
+.control-text p {
   color: #e0e0e0;
+  margin: 0;
   font-size: 0.95rem;
   line-height: 1.5;
-}
-
-/* SUBTÍTULO */
-.control-item h4 {
-  color: #ffffff;
-  margin-bottom: 0.5rem;
-}
-
-/* TEXTO */
-.control-item p {
-  color: #e0e0e0;
-  font-size: 0.95rem;
 }
 
 
