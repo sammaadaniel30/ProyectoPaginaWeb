@@ -92,24 +92,23 @@ body {
   box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
-/* TARJETA INDIVIDUAL */
+/* FILA INDIVIDUAL */
 .control-item {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+  margin-bottom: 4rem; 
 }
 
-/* IMAGEN IZQUIERDA */
+/* IMAGEN IZQUIERDA (CALIDAD ORIGINAL) */
 .control-thumb {
-  flex: 0 0 46%;
-  border-radius: 8px;
-  overflow: hidden;
+  flex: 0 0 45%;
 }
 
 .control-thumb img {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;   /* CLAVE: NO recorta */
   display: block;
 }
 
@@ -130,11 +129,40 @@ body {
   line-height: 1.5;
 }
 
-
-/* ===== MINI WIKI ===== */
-#mini-wiki {
-  background-color: #444400;
+.section-header {
+  background-color: #ff0066; 
+  text-align: center;
+  padding: 4rem 0;          
 }
+
+.section-header h2 {
+  margin: 0;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+
+/* ===== TUTORIAL ===== */
+#tutorial {
+  background-color: #e70909; 
+}
+
+/* CAJA INTERIOR */
+.tutorial-box {
+  background-color: #2e2f0f;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.tutorial-box h3 {
+  color: #ffffff;
+}
+
+.tutorial-box p {
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+
 
 /* ===== FOOTER ===== */
 footer {
@@ -143,4 +171,109 @@ footer {
   padding: 3rem 0;
   color: #ffffff;
   font-size: 0.9rem;
+}
+
+/* MEDIA QUERIES RESPONSIVE */
+
+/* MÓVIL */
+@media (max-width: 767px) {
+
+  
+  #introduccion .row,
+  #tutorial .row {
+    flex-direction: column;
+  }
+
+  /* CONTROLES */
+  .control-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .control-thumb {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .control-text {
+    margin-top: 1.5rem;
+  }
+}
+
+/* ESCRITORIO */
+@media (min-width: 768px) {
+
+  /* INTRO y TUTORIAL */
+  #introduccion .row,
+  #tutorial .row {
+    flex-direction: row;
+  }
+
+  /* CONTROLES */
+  .control-item {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .control-thumb {
+    flex: 0 0 45%;
+  }
+
+  .control-text {
+    margin-top: 0;
+  }
+}
+
+/* ===== BANNER ===== */
+#mobile-banner {
+  width: 100%;
+  background-color: #171d25; 
+  color: #ffffff;
+
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+
+  position: static;
+}
+
+#mobile-banner .banner-text {
+  flex: 1;
+}
+
+/* Link a Steam */
+#mobile-banner .steam-link {
+  color: #66c0f4;           
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#mobile-banner .steam-link:hover {
+  text-decoration: underline;
+}
+
+/* Botón cerrar */
+#mobile-banner button {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* ===== PANTALLAS GRANDES ===== */
+@media (min-width: 768px) {
+  #mobile-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 999999;
+    box-shadow: 0 -6px 20px rgba(0,0,0,0.5);
+  }
 }
