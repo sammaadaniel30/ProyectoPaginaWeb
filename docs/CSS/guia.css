@@ -49,30 +49,91 @@ body {
 .btn-warning:hover { background-color: #8c2603 !important; }
 
 /* ===== INTRODUCCIÓN ===== */
-#introduccion {
-  background-color: #00ff40;
-  color: #000;
+/* TÍTULO DE INTRODUCCIÓN */
+#introduccion 
+{
+  background-color: #77871b; 
+  padding-bottom: 6rem; 
 }
 
+#introduccion h2 {
+  text-align: center;
+}
+
+/* ESPACIO REAL ENTRE TÍTULO Y CUADRO */
+#introduccion .intro-content {
+  margin-top: 7rem;
+}
+
+.video-box {
+  background-color: #2e2f0f; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  padding-bottom: 4rem; 
+}
+
+.video-box h3 {
+  color: #ffffff;
+}
+
+.video-box p {
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+
 /* ===== CONTROLES ===== */
-#controles {
+#controles-media {
   background-color: #ff0066;
 }
 
-/* ===== CONSUMIBLES & QUÉ HACER ===== */
-#consumibles-quehacer {
-  background-color: #222;
+/* CAJA CONTENEDORA */
+.controls-box {
+  background-color: #2e2f0f;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
-#consumibles {
-  background-color: #00994c;
-  border-radius: 10px;
-  padding: 2rem;
+
+/* ITEM INDIVIDUAL */
+.control-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* uno encima de otro */
+  gap: 1rem;
 }
-#que-hacer {
-  background-color: #00994c;
-  border-radius: 10px;
-  padding: 2rem;
+
+/* IMAGEN */
+.control-item img {
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* misma proporción que el vídeo */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 2rem;    /* separación exacta entre imágenes */
 }
+
+/* SUBTÍTULO */
+.control-item h4 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+/* TEXTO */
+.control-item p {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* SUBTÍTULO */
+.control-item h4 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+/* TEXTO */
+.control-item p {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+}
+
 
 /* ===== MINI WIKI ===== */
 #mini-wiki {
