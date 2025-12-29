@@ -173,10 +173,10 @@ footer {
   font-size: 0.9rem;
 }
 
-/* MEDIA QUERIES RESPONSIVE */
 
-/* MÓVIL */
-@media (max-width: 767px) {
+
+
+@media (max-width: 1023px) {
 
   
   #introduccion .row,
@@ -200,10 +200,10 @@ footer {
   }
 }
 
-/* ESCRITORIO */
-@media (min-width: 768px) {
 
-  /* INTRO y TUTORIAL */
+@media (min-width: 1024px) {
+
+  
   #introduccion .row,
   #tutorial .row {
     flex-direction: row;
@@ -221,6 +221,14 @@ footer {
 
   .control-text {
     margin-top: 0;
+  }
+}
+
+/* Resuelve un problema entre esas dimensiones en las cajas de videos */
+@media (min-width: 992px) and (max-width: 1023px) {
+
+  .col-lg-6 {
+    width: 100%;
   }
 }
 
@@ -304,8 +312,8 @@ footer {
 }
 
 
-/* ===== PANTALLAS GRANDES ===== */
-@media (min-width: 768px) {
+
+@media (min-width: 767px) {
   #mobile-banner {
     position: fixed;
     bottom: 0;
