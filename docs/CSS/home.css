@@ -86,25 +86,6 @@ body {
 }
 
 /* ===== CARRUSEL ===== */
-#carouselRepo {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  margin-bottom: 70px;
-}
-
-.carousel-item img {
-  display: block;
-  width: 100vw;
-  height: auto;
-  max-height: 95vh;
-  object-fit: cover;
-  object-position: center;
-  filter: brightness(75%);
-}
 
 .carousel-caption {
   background: rgba(0, 0, 0, 0.53);
@@ -293,17 +274,28 @@ footer {
 }
 
 
-
-/* MEDIA QUERIES */
-
-/* ===== Móviles (≤767px) ===== */
 @media (max-width: 767px) {
   
-  .carousel-caption h5 { font-size: 1.3rem; }
-  .carousel-caption p { font-size: 0.9rem; }
+  .carousel-caption {
+    bottom: 20px;
+    padding: 0.6rem 0.9rem;
+  }
+  .carousel-caption h5 {
+    font-size: 1.1rem;
+  }
+  .carousel-caption p {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+  }
+
   .carousel-control-prev-icon, .carousel-control-next-icon { padding: 16px; }
 
-  
+  /* No muestra indicadores en móviles */ 
+  .carousel-indicators
+  {
+    display: none;
+  }
+
   #caracteristicas .row,
   #modos-juego .row,
   .reviews-wrapper {
@@ -346,8 +338,8 @@ footer {
 
 }
 
-/* ===== Tablets (768px – 1024px) ===== */
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (min-width: 768px) and (max-width: 1023px) {
   .carousel-caption h5 { font-size: 1.5rem; }
   .carousel-caption p { font-size: 0.95rem; }
 
@@ -379,8 +371,8 @@ footer {
 
 }
 
-/* ===== Portátiles y ordenadores pequeños (1025px – 1439px) ===== */
-@media (min-width: 1025px) and (max-width: 1439px) {
+
+@media (min-width: 1024px) and (max-width: 1439px) {
   .carousel-caption h5 { font-size: 2rem; }
   .carousel-caption p { font-size: 1.1rem; }
 
@@ -391,6 +383,15 @@ footer {
   }
 
   .review-card { height: 160px; }
+
+  .carousel-item img {
+    width: 100vw;
+    height: auto;
+    object-fit: contain;
+    object-position: center; 
+  }
+
+  
 }
 
 /* ===== Pantallas grandes (≥1440px) ===== */
@@ -408,6 +409,17 @@ footer {
   #modos-juego p,
   .review-card p {
     font-size: 1.1rem;
+  }
+
+  .carousel-item {
+    height: 100vh;
+  }
+
+  .carousel-item img {
+    width: 100vw;
+    height: auto;
+    object-fit: cover;
+    object-position: center top;
   }
 
 }
