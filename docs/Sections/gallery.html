@@ -13,9 +13,19 @@
   <!-- CSS propio -->
   <link rel="stylesheet" href="../CSS/gallery.css">
   <link rel="stylesheet" href="../CSS/cookie.css">
+
+  
 </head>
 
 <body>
+
+  <div id="galleryOverlay" class="gallery-overlay hidden">
+    <span class="close-overlay" id="closeGallery">&times;</span>
+
+    <span class="nav prev" id="prevImg">&#10094;</span>
+    <img id="overlayImage" src="" alt="Imagen ampliada">
+    <span class="nav next" id="nextImg">&#10095;</span>
+  </div>
 
   <!-- ===== AVISO DE COOKIES ===== -->
   <div id="cookie-overlay">
@@ -74,33 +84,29 @@
     </div>
   </nav>
 
-    <!-- ===== GALERÍA ===== -->
-  <section id="galeria" class="text-light text-center section-spacing">
+  <!-- GALERÍA -->
+  <section id="galeria" class="section-spacing">
     <div class="container">
 
-      <h2 class="fw-bold section-title mb-5">Galería</h2>
+      <h2 class="section-title text-center mb-5">Galería</h2>
 
-      <div class="gallery-grid">
-        <div class="gallery-item game">
-          <img src="../media/imgs/IMG_REPO1.png">
-        </div>
-        <div class="gallery-item art">
-          <img src="../media/imgs/IMG_REPO2.png">
-        </div>
-        <div class="gallery-item concept">
-          <img src="../media/imgs/IMG_REPO3.png">
-        </div>
-        <div class="gallery-item game">
-          <img src="../media/imgs/IMG_REPO4.png">
-        </div>
-        <div class="gallery-item art">
-          <img src="../media/imgs/IMG_REPO5.png">
-        </div>
-        <div class="gallery-item concept">
-          <img src="../media/imgs/IMG_REPO6.png">
+      <div class="galeria-wrapper">
+        <div class="gallery-mosaic" id="galleryMosaic">
+
+          <div class="mosaic-main">
+            <img src="../media/imgs/IMG_REPO1.png" data-index="0" alt="Imagen principal">
+          </div>
+
+          <div class="mosaic-side">
+            <img src="../media/imgs/IMG_REPO2.png" data-index="1" alt="Imagen secundaria">
+          </div>
+
+          <div class="mosaic-side more-images" id="openGallery">
+            <img src="../media/imgs/IMG_REPO3.png" data-index="2" alt="Más imágenes">
+            <span class="more-count">+3</span>
+          </div>
         </div>
       </div>
-
     </div>
   </section>
 
