@@ -187,9 +187,7 @@ footer {
   text-decoration: underline;
 }
 
-#formulario {
-  padding-bottom: 6rem;
-}
+
 
 #formulario .container {
   padding-top: 1rem;
@@ -200,7 +198,7 @@ footer {
   background-color: #0f0f0f;
   max-width: 800px;
   margin-top: 7rem;
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
   padding: 3.5rem 3rem;
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -211,7 +209,7 @@ footer {
 }
 
 /* ===== RESPONSIVE PERFIL AUTOR ===== */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .autor-card {
     flex-direction: column;
     align-items: center;
